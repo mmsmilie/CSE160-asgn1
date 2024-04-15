@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Points with WebGL</title>
+</head>
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400"></canvas>
+    <br>
+    <script src="asg1.js"></script>
+    <input type ="button" onclick="clearCanvas()" value="Clear Canvas"/>
+    <h2 style = "font-family:'Times New Roman', Times, serif ">Drawing Mode:</h2>
+    <input type="button" onclick="drawMode(0)" value = "Squares"/>
+    <input type="button" onclick="drawMode(1)" value = "Triangles"/>
+    <input type="button" onclick="drawMode(2)" value = "Circles"/>
+    <br>
+    <h2 style = "font-family:'Times New Roman', Times, serif ">Color Mode:</h2>
+    Red<input type = "range" min = "0" max = "255" value = "0" id = "red">
+    Green<input type = "range" min = "0" max = "255" value = "0" id = "green">
+    Blue<input type = "range" min = "0" max = "255" value = "0" id = "blue">
+    <br>
+    Shape Size: <input type = "range" min = "5" max = "40" value = "10" id = "size">
+    (Circles) Segment Count: <input type = "range" min = "3" max = "100" value = "10" id = "segments">
+    <br>
+    Brightness: <input type = "range" min = "1" max = "100" step = "1" value = "100" id = "opacity">
+</body>
+
+
+<script src="lib/webgl-utils.js"></script>
+<script src="lib/cuon-utils.js"></script>
+<script src="lib/webgl-debug.js"></script>
+<script src="Point.js"></script>
+<script src="Triangle.js"></script>
+<script src="Circle.js"></script>
+
+</html>
